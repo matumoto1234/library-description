@@ -44,7 +44,17 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/markdownit',
+    '@nuxt/content',
   ],
+
+  markdownit: {
+    injected: true,
+    breaks: true,
+    html: true,
+    linkify: true,
+    typography: true,
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
@@ -53,7 +63,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
