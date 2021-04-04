@@ -3,6 +3,7 @@
     <div class="text-center">
       <h1>{{ page.title }}</h1>
       <p>作成日:{{ page.date }}</p>
+      <h3>{{ page.description }}</h3>
       <nuxt-content :document="page" />
     </div>
   </article>

@@ -80,11 +80,15 @@ export default {
         subMenus: [
           {
             name: 'Dijkstra',
-            path: '/Description'
+            path: '/dijkstra'
           },
           {
             name: 'Warshallfloyd',
-            path: '/'
+            path: '/warshallfloyd'
+          },
+          {
+            name: 'Bellmanford',
+            path: '/bellmanford'
           }
         ]
       },
