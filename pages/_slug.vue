@@ -1,8 +1,10 @@
 <template>
   <article>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.date }}</p>
-    <nuxt-content :document="page" />
+    <div class="text-center">
+      <h1>{{ page.title }}</h1>
+      <p>作成日:{{ page.date }}</p>
+      <nuxt-content :document="page" />
+    </div>
   </article>
 </template>
 
@@ -17,3 +19,17 @@ export default {
   }
 }
 </script>
+
+<style>
+.theme--light.v-application code {
+  all: unset
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 50px;
+}
+</style>

@@ -6,27 +6,16 @@
       color="white"
       flat
     >
-      <v-avatar
-        :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'"
-        size="32"
-      ></v-avatar>
-
       <!-- V-TABS BEGIN HERE -->
       <v-tabs
         centered
         class="ml-n9"
         color="grey darken-1"
       >
-        <v-tab href="/">DASHBOARD</v-tab>
+        <v-tab href="/">TOP</v-tab>
         <v-tab href="https://github.com/matumoto1234/library">GITHUB</v-tab>
       </v-tabs>
       <!-- V-TABS END HERE -->
-
-      <v-avatar
-        class="hidden-sm-and-down"
-        color="grey darken-1 shrink"
-        size="32"
-      ></v-avatar>
     </v-app-bar>
     <!-- APP-BAR END HERE-->
 
@@ -39,7 +28,6 @@
             sm="4"
           >
             <v-sheet
-              rounded="lg"
               min-height="268"
             >
               <!-- MENU BEGIN HERE -->

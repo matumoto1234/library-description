@@ -4,7 +4,7 @@ description: Learn how to use
 date: 2021/04/04
 ---
 
-# HelloWorld
+## 実装例
 
 ```cpp
 #include<bits/stdc++.h>
