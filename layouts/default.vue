@@ -1,20 +1,53 @@
 <template>
   <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <!-- MENU BEGIN HERE -->
+      <v-subheader>Menu</v-subheader>
+      <v-list expand>
+        <v-list-group v-for="menu in menus" :key="menu.name" no-action>
+          <template v-slot:activator>
+            <v-list-item-content>
+              <v-list-item-title>{{ menu.name }}</v-list-item-title>
+            </v-list-item-content>
+          </template>
+          <v-list-item v-for="sub in menu.subMenus" :key="sub.name" :to="sub.path">
+            <v-list-item-title>
+              {{ sub.name }}
+            </v-list-item-title>
+          </v-list-item>
+        </v-list-group>
+      </v-list>
+      <!-- MENU END HERE -->
+    </v-navigation-drawer>
     <!-- APP-BAR BEGIN HERE -->
     <v-app-bar
       app
+      dense
+      absolute
       color="white"
-      flat
     >
+      <v-app-bar-nav-icon left @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>
+        library
+      </v-toolbar-title>
       <!-- V-TABS BEGIN HERE -->
-      <v-tabs
-        centered
-        class="ml-n9"
-        color="grey darken-1"
-      >
-        <v-tab href="/">TOP</v-tab>
-        <v-tab href="https://github.com/matumoto1234/library">GITHUB</v-tab>
-      </v-tabs>
+      <template v-slot:extension>
+        <v-tabs
+          class="ml-n9"
+          color="grey darken-1"
+          fixed-tabs
+        >
+          <v-tab href="/">
+            TOP
+          </v-tab>
+          <v-tab href="https://github.com/matumoto1234/library">
+            GITHUB
+          </v-tab>
+        </v-tabs>
+      </template>
       <!-- V-TABS END HERE -->
     </v-app-bar>
     <!-- APP-BAR END HERE-->
@@ -25,43 +58,14 @@
         <v-row>
           <v-col
             cols="12"
-            sm="4"
-          >
-            <v-sheet
-              min-height="268"
-            >
-              <!-- MENU BEGIN HERE -->
-              <v-subheader>Menu</v-subheader>
-              <v-list expand>
-                <v-list-group v-for="menu in menus" :key="menu.name" no-action>
-                  <template v-slot:activator>
-                    <v-list-item-content>
-                      <v-list-item-title>{{ menu.name }}</v-list-item-title>
-                    </v-list-item-content>
-                  </template>
-                  <v-list-item v-for="sub in menu.subMenus" :key="sub.name" :to="sub.path">
-                    <v-list-item-title>
-                      {{ sub.name }}
-                    </v-list-item-title>
-                  </v-list-item>
-                </v-list-group>
-              </v-list>
-              <!-- MENU END HERE -->
-            </v-sheet>
-          </v-col>
-
-          <v-col
-            cols="12"
-            sm="8"
+            sm="12"
           >
             <v-sheet
               min-height="100vh"
-              rounded="lg"
             >
-            <!-- DESCRIPTION BEGIN HERE -->
-            <router-view>
-            </router-view>
-            <!-- DESCRIPTION END HERE -->
+              <!-- DESCRIPTION BEGIN HERE -->
+              <router-view />
+              <!-- DESCRIPTION END HERE -->
             </v-sheet>
           </v-col>
         </v-row>
@@ -74,6 +78,7 @@
 <script>
 export default {
   data: () => ({
+    drawer: false,
     menus: [
       {
         name: 'グラフ',

@@ -37,27 +37,28 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/markdownit',
-    '@nuxt/content',
+    '@nuxt/content'
   ],
 
-  markdownit: {
-    injected: true,
-    breaks: true,
-    html: true,
-    linkify: true,
-    typography: true,
-  },
-
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      remarkPlugins: [
+        'remark-math',
+        'remark-toc',
+        'remark-footnotes'
+      ],
+      rehypePlugins: [
+        'rehype-mathjax'
+      ]
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

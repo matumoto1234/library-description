@@ -1,0 +1,6 @@
+[submodule "assets/library"]
+	path = assets/library
+	url = https://github.com/matumoto1234/library
+[submodule "assets/Library"]
+	path = assets/Library
+	url = https://github.com/matumoto1234/library

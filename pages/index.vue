@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
+    <v-col cols="12" sm="10" md="6">
       <div class="text-center">
         <logo />
         <vuetify-logo />
