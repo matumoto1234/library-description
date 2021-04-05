@@ -20,6 +20,8 @@ struct file{
   std::ofstream fout;
 };
 
+const char target = '@';
+
 vector<string> inputFileText(std::ifstream &fin){
   vector<string> lines;
   string line;
@@ -37,10 +39,10 @@ string findBetweenText(const vector<string> &lines){
   for(const string &line : lines){
     for(char c : line){
       if(found){
-        if(c == '$') return between_text;
+        if(c == target) return between_text;
         between_text += c;
       }else{
-        if(c == '$') found=true;
+        if(c == target) found=true;
       }
     }
   }
@@ -50,7 +52,7 @@ string findBetweenText(const vector<string> &lines){
 void replaceText(vector<string> &lines,const vector<string> &insert_text){
   int i=0;
   for(string line : lines){
-    if(line.find('$') == string::npos){
+    if(line.find(target) == string::npos){
       i++;
       continue;
     }
