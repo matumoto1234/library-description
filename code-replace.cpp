@@ -1,0 +1,123 @@
+// g++ -std=c++1z -lstdc++ -lstdc++fs code-replace.cpp
+// ./a.out
+// example
+// $assets/Library/graph/dijkstra.cpp$ (in articles/dijkstra.md) -> [code in dijkstra.cpp]
+#include <filesystem>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+
+using std::cout;
+using std::endl;
+using std::string;
+using std::vector;
+
+struct file{
+  vector<string> lines;
+  string path;
+  std::ifstream fin;
+  std::ofstream fout;
+};
+
+vector<string> inputFileText(std::ifstream &fin){
+  vector<string> lines;
+  string line;
+
+  while(getline(fin, line)){
+    lines.emplace_back(line);
+  }
+  return lines;
+}
+
+string findBetweenText(const vector<string> &lines){
+  bool found = false;
+  string between_text;
+
+  for(const string &line : lines){
+    for(char c : line){
+      if(found){
+        if(c == '$') return between_text;
+        between_text += c;
+      }else{
+        if(c == '$') found=true;
+      }
+    }
+  }
+  return "not find!";
+}
+
+void replaceText(vector<string> &lines,const vector<string> &insert_text){
+  int i=0;
+  for(string line : lines){
+    if(line.find('$') == string::npos){
+      i++;
+      continue;
+    }
+
+    lines.erase(lines.begin() + i);
+
+    int j=0;
+    for(string text : insert_text){
+      lines.insert(lines.begin() + i + j, text);
+      j++;
+    }
+
+    break;
+  }
+}
+
+int main(){
+  for(const std::filesystem::directory_entry &i:std::filesystem::recursive_directory_iterator("./content/articles/")){
+    file md,cpp;
+
+
+    // get markdown file path
+    md.path=i.path().string();
+
+
+    // open markdown file for input
+    md.fin.open(md.path);
+    if(!md.fin.is_open()) continue;
+
+
+    // input lines
+    md.lines = inputFileText(md.fin);
+
+
+    // find $hogehoge$
+    cpp.path = findBetweenText(md.lines);
+
+
+    // open cpp file in library
+    cpp.fin.open(cpp.path);
+    if(!cpp.fin.is_open()) continue;
+
+
+    // input code
+    cpp.lines = inputFileText(cpp.fin);
+
+
+    // replace $hoge$ -> [code]
+    replaceText(md.lines,cpp.lines);
+
+
+    // close file
+    md.fin.close();
+    cpp.fin.close();
+
+
+    // open markdown file for output
+    md.fout.open(md.path);
+    
+
+    // overwrite markdown file
+    for(const string line : md.lines){
+      md.fout << line << '\n';
+    }
+
+    break;
+  }
+
+  return 0;
+}
