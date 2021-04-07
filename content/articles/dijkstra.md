@@ -1,6 +1,6 @@
 ---
 title: Dijkstra
-description: 単一始点最短経路
+description: グラフ 単一始点最短経路
 date: 2021/04/06
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: WarshallFloyd
 description: グラフ 単一始点最短経路
-date: 2021/04/6
+date: 2021/04/06
 ---
 
 ## 説明

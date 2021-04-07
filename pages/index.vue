@@ -2,88 +2,70 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="10" md="6">
       <div class="text-center">
-        <logo />
-        <vuetify-logo />
+        <h1>HelloWorld</h1>
+        <br>
+        <v-btn
+          dark
+          color="blue"
+          min-height="100"
+          min-width="100"
+          class="mx-2"
+          fab
+          href="https://twitter.com/matumoto_1234"
+        >
+          <v-icon dark size="70">
+            mdi-twitter
+          </v-icon>
+        </v-btn>
+        <v-btn
+          dark
+          min-height="100"
+          min-width="100"
+          fab
+          href="https://github.com/matumoto1234"
+        >
+          <v-icon dark size="70">
+            mdi-github
+          </v-icon>
+        </v-btn>
+        <br>
+        <br>
+        <hr>
       </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      matumotoが作ったライブラリです。
+      コピペなど自由です。
+      <br>
+      バグっていることもあるので信用しきらないでください。
+      <br>
+      バグを見つけたらTwitterなどで教えてくださるとありがたいです。
     </v-col>
   </v-row>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
-}
 </script>
+
+<style scoped>
+h1 {
+  font-size: 70px;
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
+h1:before {
+  left: 7px;
+}
+h1:after {
+  right: 7px;
+}
+</style>

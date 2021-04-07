@@ -2,6 +2,9 @@
   <v-app id="inspire">
     <v-navigation-drawer
       v-model="drawer"
+      width="500"
+      disable-route-watcher
+      temporary
       app
     >
       <!-- MENU BEGIN HERE -->
@@ -15,7 +18,7 @@
           </template>
           <v-list-item v-for="sub in menu.subMenus" :key="sub.name" :to="sub.path">
             <v-list-item-title>
-              {{ sub.name }}
+              {{ sub.janame }}({{ sub.enname }})
             </v-list-item-title>
           </v-list-item>
         </v-list-group>
@@ -84,27 +87,33 @@ export default {
         name: 'データ構造',
         subMenus: [
           {
-            name: 'BinarySearch',
+            janame: '二分探索',
+            enname: 'BinarySearch',
             path: 'binarysearch'
           },
           {
-            name: 'CumulativeSum',
+            janame: '累積和',
+            enname: 'CumulativeSum',
             path: 'cumulativesum'
           },
           {
-            name: 'CumulativeSum2D',
+            janame: '二次元累積和',
+            enname: 'CumulativeSum2D',
             path: 'cumulativesum2d'
           },
           {
-            name: 'SegmentTree',
+            janame: 'セグメントツリー',
+            enname: 'SegmentTree',
             path: 'segmenttree'
           },
           {
-            name: 'UnionFind',
+            janame: '素集合データ構造',
+            enname: 'UnionFind',
             path: 'unionfind'
           },
           {
-            name: 'WeightedUnionFind',
+            janame: '重み付き素集合データ構造',
+            enname: 'WeightedUnionFind',
             path: 'weightedunionfind'
           }
         ]
@@ -113,7 +122,8 @@ export default {
         name: '動的計画法',
         subMenus: [
           {
-            name: 'LongestCommonSubsequence',
+            janame: '最長共通部分列',
+            enname: 'LongestCommonSubsequence',
             path: 'longestcommonsubsequence'
           }
         ]
@@ -122,7 +132,8 @@ export default {
         name: '幾何',
         subMenus: [
           {
-            name: 'Point',
+            janame: '二次元上の点',
+            enname: 'Point',
             path: 'point'
           }
         ]
@@ -131,43 +142,53 @@ export default {
         name: 'グラフ',
         subMenus: [
           {
-            name: 'Bellmanford',
+            janame: '単一始点最短経路',
+            enname: 'Bellmanford',
             path: '/bellmanford'
           },
           {
-            name: 'ConvertGraph',
+            janame: 'グラフ変換',
+            enname: 'ConvertGraph',
             path: '/convertgraph'
           },
           {
-            name: 'Dijkstra',
+            janame: '単一始点最短経路',
+            enname: 'Dijkstra',
             path: '/dijkstra'
           },
           {
-            name: 'GridBFS',
+            janame: 'グリッドグラフ上の幅優先探索',
+            enname: 'GridBFS',
             path: '/gridbfs'
           },
           {
-            name: 'LowLink',
+            janame: '橋/間接点の検出',
+            enname: 'LowLink',
             path: '/lowlink'
           },
           {
-            name: 'ShortestHamiltonianCycle',
+            janame: '最短ハミルトン閉路',
+            enname: 'ShortestHamiltonianCycle',
             path: '/shortesthamiltoniancycle'
           },
           {
-            name: 'ShortestHamiltonianPath',
+            janame: '最短ハミルトン経路',
+            enname: 'ShortestHamiltonianPath',
             path: '/shortesthamiltonianpath'
           },
           {
-            name: 'StronglyConnectedComponent',
+            janame: '強連結成分分解',
+            enname: 'StronglyConnectedComponent',
             path: '/stronglyconnectedcomponent'
           },
           {
-            name: 'TopologicalSort',
+            janame: 'トポロジカルソート',
+            enname: 'TopologicalSort',
             path: '/topologicalsort'
           },
           {
-            name: 'WarshallFloyd',
+            janame: '単一始点最短経路',
+            enname: 'WarshallFloyd',
             path: '/warshallfloyd'
           }
         ]
@@ -176,47 +197,58 @@ export default {
         name: '数学',
         subMenus: [
           {
-            name: 'CeilDivision',
+            janame: '切り上げ割り算',
+            enname: 'CeilDivision',
             path: 'ceildiv'
           },
           {
-            name: 'Combination',
+            janame: '組み合わせ',
+            enname: 'Combination',
             path: 'combination'
           },
           {
-            name: 'Divisor',
+            janame: '約数列挙',
+            enname: 'Divisor',
             path: 'divisor'
           },
           {
-            name: 'EulerPhi',
+            janame: 'オイラーのφ関数',
+            enname: 'EulerPhi',
             path: 'eulerphi'
           },
           {
-            name: 'ExtendedGCD',
+            janame: '拡張ユークリッドの互除法',
+            enname: 'ExtendedGCD',
             path: 'extgcd'
           },
           {
-            name: 'ModInverse',
+            janame: '合同式での逆元',
+            enname: 'ModInverse',
             path: 'modinv'
           },
           {
-            name: 'ModPower',
+            janame: '合同式でのべき乗',
+            enname: 'ModPower',
             path: 'modpow'
           },
           {
-            name: 'Power',
+            janame: 'べき乗',
+            enname: 'Power',
             path: 'pow'
           },
           {
-            name: 'PrimeFactor',
+            janame: '素因数列挙',
+            enname: 'PrimeFactor',
             path: 'primefactor'
           },
           {
-            name: 'Sieve of Eratosthenes',
+            janame: 'エラトステネスの篩',
+            enname: 'Sieve of Eratosthenes',
             path: 'sieve'
           },
           {
-            name: 'SmallestPrimeFactor',
+            janame: '最小素因数分解',
+            enname: 'SmallestPrimeFactor',
             path: 'smallestprimefactor'
           }
         ]
@@ -225,15 +257,18 @@ export default {
         name: '文字列',
         subMenus: [
           {
-            name: 'RollingHash',
+            janame: 'ローリングハッシュ',
+            enname: 'RollingHash',
             path: 'rollinghash'
           },
           {
-            name: 'RollingHash2D',
+            janame: '二次元ローリングハッシュ',
+            enname: 'RollingHash2D',
             path: 'rollinghash2d'
           },
           {
-            name: 'Substring',
+            janame: '連続部分文字列',
+            enname: 'Substring',
             path: 'substr'
           }
         ]
@@ -242,7 +277,8 @@ export default {
         name: 'その他',
         subMenus: [
           {
-            name: 'Compress',
+            janame: '座標圧縮',
+            enname: 'Compress',
             path: 'compress'
           }
         ]

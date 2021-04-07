@@ -1,6 +1,6 @@
 ---
 title: EulerPhi
-description: 数学 オイラーのφかんすう
+description: 数学 オイラーのφ関数
 date: 2021/04/07
 ---
 
