@@ -81,6 +81,53 @@ export default {
     drawer: false,
     menus: [
       {
+        name: 'データ構造',
+        subMenus: [
+          {
+            name: 'BinarySearch',
+            path: 'binarysearch'
+          },
+          {
+            name: 'CumulativeSum',
+            path: 'cumulativesum'
+          },
+          {
+            name: 'CumulativeSum2D',
+            path: 'cumulativesum2d'
+          },
+          {
+            name: 'SegmentTree',
+            path: 'segmenttree'
+          },
+          {
+            name: 'UnionFind',
+            path: 'unionfind'
+          },
+          {
+            name: 'WeightedUnionFind',
+            path: 'weightedunionfind'
+          }
+        ]
+      },
+      {
+        name: '動的計画法',
+        subMenus: [
+          {
+            name: 'LongestCommonSubsequence',
+            path: 'longestcommonsubsequence'
+          }
+        ]
+      },
+      {
+        name: '幾何',
+        subMenus: [
+          {
+            name: 'Point',
+            path: 'point'
+          }
+        ]
+      },
+      {
         name: 'グラフ',
         subMenus: [
           {
@@ -116,25 +163,87 @@ export default {
             path: '/stronglyconnectedcomponent'
           },
           {
-            name: 'WarshallFloyd',
-            path: '/warshallfloyd'
+            name: 'TopologicalSort',
+            path: '/topologicalsort'
           },
           {
-            name: 'Warshallfloyd',
+            name: 'WarshallFloyd',
             path: '/warshallfloyd'
-          },
+          }
         ]
       },
       {
-        name: 'データ構造',
+        name: '数学',
         subMenus: [
           {
-            name: 'Cumulative',
-            path: 'Description'
+            name: 'CeilDivision',
+            path: 'ceildiv'
           },
           {
-            name: 'Cumulative2D',
-            path: 'Description'
+            name: 'Combination',
+            path: 'combination'
+          },
+          {
+            name: 'Divisor',
+            path: 'divisor'
+          },
+          {
+            name: 'EulerPhi',
+            path: 'eulerphi'
+          },
+          {
+            name: 'ExtendedGCD',
+            path: 'extgcd'
+          },
+          {
+            name: 'ModInverse',
+            path: 'modinv'
+          },
+          {
+            name: 'ModPower',
+            path: 'modpow'
+          },
+          {
+            name: 'Power',
+            path: 'pow'
+          },
+          {
+            name: 'PrimeFactor',
+            path: 'primefactor'
+          },
+          {
+            name: 'Sieve of Eratosthenes',
+            path: 'sieve'
+          },
+          {
+            name: 'SmallestPrimeFactor',
+            path: 'smallestprimefactor'
+          }
+        ]
+      },
+      {
+        name: '文字列',
+        subMenus: [
+          {
+            name: 'RollingHash',
+            path: 'rollinghash'
+          },
+          {
+            name: 'RollingHash2D',
+            path: 'rollinghash2d'
+          },
+          {
+            name: 'Substring',
+            path: 'substr'
+          }
+        ]
+      },
+      {
+        name: 'その他',
+        subMenus: [
+          {
+            name: 'Compress',
+            path: 'compress'
           }
         ]
       }
