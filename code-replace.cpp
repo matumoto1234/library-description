@@ -1,26 +1,26 @@
 // g++ -std=c++1z -lstdc++ -lstdc++fs code-replace.cpp
 // ./a.out
 // example
-// $assets/Library/graph/dijkstra.cpp$ (in articles/dijkstra.md) -> [code in dijkstra.cpp]
+// @assets/Library/graph/dijkstra.cpp@ (in articles/dijkstra.md) -> [code in dijkstra.cpp]
 #include <filesystem>
 #include <fstream>
-#include <iostream>
 #include <string>
 #include <vector>
+#include <iostream>
 
-using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
 
-struct file{
+const char target = '@';
+
+struct file {
   vector<string> lines;
   string path;
   std::ifstream fin;
   std::ofstream fout;
 };
 
-const char target = '@';
 
 vector<string> inputFileText(std::ifstream &fin){
   vector<string> lines;
@@ -71,7 +71,7 @@ void replaceText(vector<string> &lines,const vector<string> &insert_text){
 
 int main(){
   for(const std::filesystem::directory_entry &i:std::filesystem::recursive_directory_iterator("./content/articles/")){
-    file md,cpp;
+    file md, cpp;
 
 
     // get markdown file path
@@ -111,14 +111,13 @@ int main(){
 
     // open markdown file for output
     md.fout.open(md.path);
+    if(!md.fout.is_open()) continue;
     
 
     // overwrite markdown file
     for(const string line : md.lines){
       md.fout << line << '\n';
     }
-
-    break;
   }
 
   return 0;

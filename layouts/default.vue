@@ -84,17 +84,45 @@ export default {
         name: 'グラフ',
         subMenus: [
           {
+            name: 'Bellmanford',
+            path: '/bellmanford'
+          },
+          {
+            name: 'ConvertGraph',
+            path: '/convertgraph'
+          },
+          {
             name: 'Dijkstra',
             path: '/dijkstra'
+          },
+          {
+            name: 'GridBFS',
+            path: '/gridbfs'
+          },
+          {
+            name: 'LowLink',
+            path: '/lowlink'
+          },
+          {
+            name: 'ShortestHamiltonianCycle',
+            path: '/shortesthamiltoniancycle'
+          },
+          {
+            name: 'ShortestHamiltonianPath',
+            path: '/shortesthamiltonianpath'
+          },
+          {
+            name: 'StronglyConnectedComponent',
+            path: '/stronglyconnectedcomponent'
+          },
+          {
+            name: 'WarshallFloyd',
+            path: '/warshallfloyd'
           },
           {
             name: 'Warshallfloyd',
             path: '/warshallfloyd'
           },
-          {
-            name: 'Bellmanford',
-            path: '/bellmanford'
-          }
         ]
       },
       {

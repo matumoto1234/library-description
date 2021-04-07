@@ -1,7 +1,7 @@
 ---
-title: Dijkstra
-description: グラフ 単一始点最短経路
-date: 2021/04/04
+title: 英語タイトル
+description: 分類 日本語タイトル
+date: 2021/04/6
 ---
 
 ## 説明
@@ -11,5 +11,5 @@ date: 2021/04/04
 ## 実装例
 
 ```cpp
-@assets/@
+@assets/Library/@
 ```

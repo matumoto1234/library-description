@@ -1,33 +1,31 @@
 ---
 title: Dijkstra
 description: 単一始点最短経路
-date: 2021/04/04
+date: 2021/04/06
 ---
 
 ## 説明
-aiueo
+単一始点最短経路を求めるアルゴリズムです。負の辺があっても負の閉路がなければ正しく動作します。  
+
 
 ## 計算量
-
+頂点数をV,辺の数をEとすると
 $$
-  e^{i\pi}+1= 0
+O(ElogV)
 $$
-aiueo  
-aaa
 
 ## 実装例
+main関数内では[AOJ_GRL_1_A](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A&lang=ja)を解いています。
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
 
 template <typename T>
 struct Dijkstra {
   struct edge {
     int to;
     T cost;
-
     edge() {}
     edge(int to, T cost) : to(to), cost(cost) {}
     bool operator<(const edge &e) const { return cost > e.cost; }
@@ -50,15 +48,11 @@ struct Dijkstra {
     priority_queue<edge> Q;
     ds[start] = 0;
     Q.emplace(start, ds[start]);
-
     while (!Q.empty()) {
       auto p = Q.top();
       Q.pop();
       int v = p.to;
-
-      if (ds[v] < p.cost)
-        continue;
-
+      if (ds[v] < p.cost) continue;
       for (auto e : G[v]) {
         if (ds[e.to] > ds[v] + e.cost) {
           ds[e.to] = ds[v] + e.cost;
@@ -86,6 +80,7 @@ struct Dijkstra {
 };
 
 int main() {
+  using ll = long long;
   int v, e, r;
 
   cin >> v >> e >> r;
@@ -100,7 +95,7 @@ int main() {
 
   for (int i = 0; i < v; i++) {
     if (G[i] == G.inf()) {
-      cout << "INF\n";
+      cout << "INF" << endl;
       continue;
     }
     cout << G[i] << endl;
