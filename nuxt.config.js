@@ -52,7 +52,8 @@ export default {
       remarkPlugins: [
         'remark-math',
         'remark-toc',
-        'remark-footnotes'
+        'remark-footnotes',
+        'remark-collapse'
       ],
       rehypePlugins: [
         'rehype-mathjax'
