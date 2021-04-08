@@ -53,11 +53,29 @@ export default {
         'remark-math',
         'remark-toc',
         'remark-footnotes',
-        'remark-collapse'
+        ['remark-code-import-replace', {
+          replace: (node, meta, {u}) => { 
+            return [
+              /*
+              u('html', {value: '<${meta.file.name}>'}),
+              u('html', {value: '</${meta.file.name}>'}),
+              */
+              node
+            ]
+          }
+        }]
       ],
       rehypePlugins: [
         'rehype-mathjax'
       ]
+    }
+  },
+  hooks: {
+    'component:dirs': async (dirs) => {
+      await dirs.push({
+        path: '~/content',
+        global: true
+      })
     }
   },
 

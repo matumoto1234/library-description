@@ -10,6 +10,5 @@ date: 2021/04/07
 
 ## 実装例
 
-```cpp
-@assets/Library/graph/shortesthamiltoniancycle.cpp@
+```cpp import=/assets/Library/graph/shortesthamiltoniancycle.cpp
 ```
