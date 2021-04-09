@@ -72,7 +72,7 @@ export default {
   },
   hooks: {
     'component:dirs': async (dirs) => {
-      await dirs.push({
+      dirs.push({
         path: '~/content',
         global: true
       })

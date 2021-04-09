@@ -197,7 +197,7 @@ export default {
         name: '数学',
         subMenus: [
           {
-            janame: '切り上げ割り算',
+            janame: '切り上げ除算',
             enname: 'CeilDivision',
             path: 'ceildiv'
           },
@@ -218,7 +218,7 @@ export default {
           },
           {
             janame: '拡張ユークリッドの互除法',
-            enname: 'ExtendedGCD',
+            enname: 'ExtendedEuclideanAlgorithm',
             path: 'extgcd'
           },
           {
