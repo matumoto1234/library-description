@@ -53,8 +53,8 @@ export default {
         'remark-math',
         'remark-toc',
         'remark-footnotes',
-        ['remark-code-import-replace', {
-          replace: (node, meta, {u}) => { 
+        [ 'remark-code-import-replace', {
+          replace: (node, meta, {u}) => {
             return [
               /*
               u('html', {value: '<${meta.file.name}>'}),
@@ -71,7 +71,7 @@ export default {
     }
   },
   hooks: {
-    'component:dirs': async (dirs) => {
+    'component:dirs' : async (dirs) => {
       dirs.push({
         path: '~/content',
         global: true
