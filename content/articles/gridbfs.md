@@ -13,9 +13,6 @@ date: 2021/04/07
 3. 訪問していない場合に、そのマスの距離を記録し、マスをキューに入れます。
 (2)と(3)を繰り返すことで探索を進めていき、キューの中身がなくなったら終了です。
 
-こちらのサイトがおすすめです。  
-[atcoder typical contest 002 A](https://atcoder.jp/contests/atc002/tasks/abc007_3)
-
 ## 計算量
 $$
 O(HW)
@@ -25,3 +22,8 @@ $$
 
 ```cpp import=/assets/Library/graph/gridbfs.cpp
 ```
+
+## 参考
+
+こちらのサイトがおすすめです。  
+> [atcoder typical contest 002 A](https://atcoder.jp/contests/atc002/tasks/abc007_3)

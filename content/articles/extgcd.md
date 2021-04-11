@@ -8,10 +8,6 @@ date: 2021/04/07
 
 ax + by = gcd(a, b)となるx,yを求めます。
 
-こちらの記事が参考になります。
-> [https://qiita.com/drken/items/b97ff231e43bce50199a](https://qiita.com/drken/items/b97ff231e43bce50199a)  
-> [https://qiita.com/oha-yashi/items/aa98a8e31633450967ab](https://qiita.com/oha-yashi/items/aa98a8e31633450967ab)
-
 ## 計算量
 $$
 O(log N)
@@ -22,3 +18,7 @@ main関数内では[https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL
 
 ```cpp import=/assets/Library/math/extgcd.cpp
 ```
+
+## 参考
+> [https://qiita.com/drken/items/b97ff231e43bce50199a](https://qiita.com/drken/items/b97ff231e43bce50199a)  
+> [https://qiita.com/oha-yashi/items/aa98a8e31633450967ab](https://qiita.com/oha-yashi/items/aa98a8e31633450967ab)

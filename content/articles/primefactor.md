@@ -1,7 +1,7 @@
 ---
 title: PrimeFactor
 description: 数学 素因数列挙
-date: 2021/04/07
+date: 2021/04/11
 ---
 
 ## 説明
