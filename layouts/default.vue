@@ -162,7 +162,7 @@ export default {
             path: '/gridbfs'
           },
           {
-            janame: '橋/間接点の検出',
+            janame: '橋/間接点の列挙',
             enname: 'LowLink',
             path: '/lowlink'
           },

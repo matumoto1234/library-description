@@ -1,6 +1,6 @@
 ---
 title: LowLink
-description: グラフ 橋/間接点の検知
+description: グラフ 橋/間接点の列挙
 date: 2021/04/07
 ---
 
