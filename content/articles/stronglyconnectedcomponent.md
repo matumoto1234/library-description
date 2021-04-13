@@ -16,3 +16,6 @@ $$
 
 ```cpp import=/assets/Library/graph/stronglyconnectedcomponent.cpp
 ```
+
+## 参考
+> [https://manabitimes.jp/math/125](https://manabitimes.jp/math/125)

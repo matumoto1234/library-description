@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/library-description/favicon.ico' }
     ]
   },
 
@@ -45,6 +45,11 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content'
   ],
+
+  // For deploy github pages
+  router: {
+    base: '/library-description/'
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {

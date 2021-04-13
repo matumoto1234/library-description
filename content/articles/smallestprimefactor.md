@@ -1,11 +1,15 @@
 ---
 title: SmallestPrimeFactor
 description: 数学 最小素因数分解
-date: 2021/04/07
+date: 2021/04/12
 ---
 
 ## 説明
-エラトステネスの篩を利用して素因数分解を行います。
+エラトステネスの篩のように前計算してから素因数分解を行います。  
+osak法とも呼ばれるようです。
+
+nの最小素因数をdata[n]に入れておくことでn=n/data[n]と辿っていくことで高速に素因数分解ができます。  
+素数の倍数をループするさいにその素数を配列に格納していき、今後変更しないようにします。
 
 ## 計算量
 構築$O(NloglogN)$  
@@ -15,3 +19,8 @@ date: 2021/04/07
 
 ```cpp import=/assets/Library/math/smallestprimefactor.cpp
 ```
+
+## 参考
+
+> [https://algo-logic.info/prime-fact](https://algo-logic.info/prime-fact)
+> [https://osak.jp/diary/diary_201310.html#2013101](https://osak.jp/diary/diary_201310.html#2013101)
