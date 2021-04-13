@@ -43,7 +43,7 @@
           color="grey darken-1"
           fixed-tabs
         >
-          <v-tab href="/">
+          <v-tab to="/">
             TOP
           </v-tab>
           <v-tab href="https://github.com/matumoto1234/library">
