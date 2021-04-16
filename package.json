@@ -26,6 +26,7 @@
     "remark": "^13.0.0",
     "remark-breaks": "^2.0.2",
     "remark-code-import-replace": "^0.2.0",
+    "remark-collapse": "^0.1.2",
     "remark-footnotes": "^3.0.0",
     "remark-math": "^4.0.0",
     "remark-toc": "^7.2.0"

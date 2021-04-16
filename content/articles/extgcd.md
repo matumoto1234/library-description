@@ -1,11 +1,11 @@
 ---
 title: ExtendedEuclideanAlgorithm
 description: 数学 拡張ユークリッドの互除法
-date: 2021/04/07
+date: 2021/04/16
 ---
 
 ## 説明
-ax + by = gcd(a, b)を満たすx,yを求めます。
+$ax + by = gcd(a, b)$を満たす$x$, $y$を求めます。
 
 ## 計算量
 $$

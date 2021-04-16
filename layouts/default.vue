@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer
       v-model="drawer"
-      width="500"
+      width="550"
       disable-route-watcher
       temporary
       app

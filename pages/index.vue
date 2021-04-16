@@ -22,7 +22,7 @@
           min-height="100"
           min-width="100"
           fab
-          href="https://github.com/matumoto1234"
+          href="https://github.com/matumoto1234/library"
         >
           <v-icon dark size="70">
             mdi-github
