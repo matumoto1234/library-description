@@ -147,24 +147,29 @@ export default {
             path: '/bellmanford'
           },
           {
-            janame: 'グラフ変換',
-            enname: 'ConvertGraph',
-            path: '/convertgraph'
-          },
-          {
             janame: '単一始点最短経路',
             enname: 'Dijkstra',
             path: '/dijkstra'
           },
           {
-            janame: 'グリッドグラフ上の幅優先探索',
-            enname: 'GridBFS',
-            path: '/gridbfs'
+            janame: '単一始点最短経路',
+            enname: 'WarshallFloyd',
+            path: '/warshallfloyd'
           },
           {
             janame: '橋/間接点の列挙',
             enname: 'LowLink',
             path: '/lowlink'
+          },
+          {
+            janame: 'トポロジカルソート',
+            enname: 'TopologicalSort',
+            path: '/topologicalsort'
+          },
+          {
+            janame: '強連結成分分解',
+            enname: 'StronglyConnectedComponent',
+            path: '/stronglyconnectedcomponent'
           },
           {
             janame: '最短ハミルトン閉路',
@@ -177,19 +182,14 @@ export default {
             path: '/shortesthamiltonianpath'
           },
           {
-            janame: '強連結成分分解',
-            enname: 'StronglyConnectedComponent',
-            path: '/stronglyconnectedcomponent'
+            janame: 'グラフ変換',
+            enname: 'ConvertGraph',
+            path: '/convertgraph'
           },
           {
-            janame: 'トポロジカルソート',
-            enname: 'TopologicalSort',
-            path: '/topologicalsort'
-          },
-          {
-            janame: '単一始点最短経路',
-            enname: 'WarshallFloyd',
-            path: '/warshallfloyd'
+            janame: 'グリッドグラフ上の幅優先探索',
+            enname: 'GridBFS',
+            path: '/gridbfs'
           }
         ]
       },
@@ -210,6 +210,11 @@ export default {
             janame: '約数列挙',
             enname: 'Divisor',
             path: 'divisor'
+          },
+          {
+            janame: '素因数列挙',
+            enname: 'PrimeFactor',
+            path: 'primefactor'
           },
           {
             janame: 'オイラーのφ関数',
@@ -235,11 +240,6 @@ export default {
             janame: 'べき乗',
             enname: 'Power',
             path: 'pow'
-          },
-          {
-            janame: '素因数列挙',
-            enname: 'PrimeFactor',
-            path: 'primefactor'
           },
           {
             janame: 'エラトステネスの篩',
