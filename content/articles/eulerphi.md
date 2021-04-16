@@ -21,5 +21,8 @@ $$
 
 ## 実装例
 
+##### main関数内で解いている問題
+> [https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_D](https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_D)
+
 ```cpp import=/assets/Library/math/eulerphi.cpp
 ```
