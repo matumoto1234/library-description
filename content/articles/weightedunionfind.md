@@ -29,4 +29,4 @@ $\alpha(N)$はアッカーマン関数の逆関数です
 ```
 
 ## 参考
-> [https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_](https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_)
+> [https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_B](https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_B)

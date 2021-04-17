@@ -36,6 +36,8 @@ $\alpha(N)$はアッカーマン関数の逆関数です
 ```
 
 ## 参考
-> [https://atcoder.jp/contests/atc001/tasks/unionfind_](https://atcoder.jp/contests/atc001/tasks/unionfind_)
-> [https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_](https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_)
-> [https://rsk0315.hatenablog.com/entry/2020/11/14/17042](https://rsk0315.hatenablog.com/entry/2020/11/14/17042)
+> [https://atcoder.jp/contests/atc001/tasks/unionfind_a](https://atcoder.jp/contests/atc001/tasks/unionfind_a)
+
+> [https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_A](https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_A)
+
+> [https://rsk0315.hatenablog.com/entry/2020/11/14/170423](https://rsk0315.hatenablog.com/entry/2020/11/14/170423)
