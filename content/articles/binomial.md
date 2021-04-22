@@ -1,7 +1,7 @@
 ---
-title: Combination
-description: 数学 組み合わせ
-date: 2021/04/07
+title: Binomial
+description: 数学 二項係数
+date: 2021/04/22
 ---
 
 ## 説明
@@ -21,5 +21,5 @@ $$
 
 ## 実装例
 
-```cpp import=/assets/Library/math/combination.cpp
+```cpp import=/assets/Library/math/binomial.cpp
 ```

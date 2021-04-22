@@ -202,9 +202,9 @@ export default {
             path: 'ceildiv'
           },
           {
-            janame: '組み合わせ',
-            enname: 'Combination',
-            path: 'combination'
+            janame: '二項係数',
+            enname: 'Binomial',
+            path: 'binomial'
           },
           {
             janame: '約数列挙',
