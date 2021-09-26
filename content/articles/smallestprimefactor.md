@@ -1,23 +1,23 @@
 ---
-title: SmallestPrimeFactor
-description: 数学 最小素因数分解
-date: 2021/04/16
+title: PrimeFactorTable
+description: 数学 素因数分解テーブル
+date: 2021/09/26
 ---
 
 ## 説明
-エラトステネスの篩のように前計算してから素因数分解を行います  
-$osak$法とも呼ばれるようです
+エラトステネスの篩の要領で $1$ から $N$ までの値の最小素因数を前計算してから素因数分解を行います  
+$osa_k$ 法や、高速素因数分解などとも呼ばれます
 
-$N$の最小素因数を$data[N]$に入れておくことで$N=N/data[N]$と辿っていくことで高速に素因数分解ができます  
-素数の倍数をループする際にその素数を配列に格納していき, 今後変更しないようにします
+$1$ から $N$ について $i$ 番目の数の最小素因数を `data[i]` に入れておくことで `i /= data[i]` と辿っていくことで高速に素因数分解ができます  
 
 ## 計算量
-構築$O(NloglogN)$  
-素因数分解$O(logN)$
+$$
+<O(N \log \log N), O(\log N)>
+$$
 
 ## 実装例
 
-```cpp import=/assets/Library/math/smallestprimefactor.cpp
+```cpp import=/assets/Library/math/primefactortable.cpp
 ```
 
 ## 参考
