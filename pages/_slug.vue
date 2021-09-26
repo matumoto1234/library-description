@@ -24,7 +24,9 @@ export default {
 
 <style>
 .theme--light.v-application code {
-  all: unset
+  all: unset;
+  font-family: monospace;
+  color: rgb(212, 10, 30);
 }
 
 h1 {
