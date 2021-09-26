@@ -24,9 +24,14 @@ export default {
 
 <style>
 .theme--light.v-application code {
+  /* --v-background-base: unset !important; */
+  /* background-color: gray !important; */
   all: unset;
-  font-family: monospace;
-  color: rgb(212, 10, 30);
+  font-family: jetbrains mono;
+}
+
+pre code {
+  background-color: unset !important;
 }
 
 h1 {
