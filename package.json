@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
+    "lottie-web": "^5.7.13",
     "nuxt": "^2.15.3",
     "rehype-mathjax": "^3.1.0",
     "remark": "^13.0.0",

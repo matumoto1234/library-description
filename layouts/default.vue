@@ -11,7 +11,7 @@
       <v-subheader>Menu</v-subheader>
       <v-list expand>
         <v-list-group v-for="menu in menus" :key="menu.name" no-action>
-          <template v-slot:activator>
+          <template #activator>
             <v-list-item-content>
               <v-list-item-title>{{ menu.name }}</v-list-item-title>
             </v-list-item-content>
@@ -25,53 +25,61 @@
       </v-list>
       <!-- MENU END HERE -->
     </v-navigation-drawer>
+
     <!-- APP-BAR BEGIN HERE -->
     <v-app-bar
-      app
       dense
-      absolute
-      color="white"
+      app
+      :absolute="isAbsolute"
+      elevation="0"
+      color="light-blue"
     >
-      <v-app-bar-nav-icon left @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        left
+        color="white"
+        @click="drawer = !drawer"
+      />
       <v-toolbar-title>
-        library
-      </v-toolbar-title>
-      <!-- V-TABS BEGIN HERE -->
-      <template v-slot:extension>
-        <v-tabs
-          class="ml-n9"
-          color="grey darken-1"
-          fixed-tabs
+        <v-btn
+          :ripple="false"
+          to="/"
+          plain
+          nuxt
+          text
+          color="white"
+          style="text-transform: none !important;"
         >
-          <v-tab to="/">
-            TOP
-          </v-tab>
-          <v-tab href="https://github.com/matumoto1234/library">
-            GITHUB
-          </v-tab>
-        </v-tabs>
-      </template>
-      <!-- V-TABS END HERE -->
+          Library
+        </v-btn>
+      </v-toolbar-title>
+
+      <v-spacer />
+
+      <v-btn icon @click="isAbsolute = !isAbsolute">
+        <v-icon v-if="isAbsolute" color="white">
+          mdi-pin-outline
+        </v-icon>
+        <v-icon v-else color="white">
+          mdi-pin
+        </v-icon>
+      </v-btn>
     </v-app-bar>
     <!-- APP-BAR END HERE-->
 
     <!-- CONTENTS BEGIN HERE -->
-    <v-main class="grey lighten-3">
+    <v-main>
       <v-container>
-        <v-row>
-          <v-col
-            cols="12"
-            sm="12"
+        <v-col
+          style="width:100%"
+        >
+          <v-sheet
+            min-height="100vh"
           >
-            <v-sheet
-              min-height="100vh"
-            >
-              <!-- DESCRIPTION BEGIN HERE -->
-              <router-view />
-              <!-- DESCRIPTION END HERE -->
-            </v-sheet>
-          </v-col>
-        </v-row>
+            <!-- DESCRIPTION BEGIN HERE -->
+            <router-view />
+            <!-- DESCRIPTION END HERE -->
+          </v-sheet>
+        </v-col>
       </v-container>
     </v-main>
     <!-- CONTENTS END HERE -->
@@ -82,6 +90,8 @@
 export default {
   data: () => ({
     drawer: false,
+    isAbsolute: false,
+    isCollapse: false,
     menus: [
       {
         name: 'データ構造',

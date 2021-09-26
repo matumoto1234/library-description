@@ -5,7 +5,7 @@ date: 2021/04/16
 ---
 
 ## 説明
-有効な値と有効でない値の境界を二分探索して求めます  
+有効な値と有効でない値の境界を求めます  
 
 
 二分探索は,データの大小関係を利用した高速な探索アルゴリズムです
@@ -100,7 +100,12 @@ $$
 
 <br>
 
-**実装例の説明**  
+## 計算量
+$$
+O(logN)
+$$
+
+## 実装例
 コンストラクタ  
 ```cpp
 (1) BinarySearch<S, is_valid> bs
@@ -124,12 +129,7 @@ BinarySearch<int, is_valid> bs(n,-1); // bs(valid, invalid)
 $set\_valid$関数もしくは変数生成時に二分探索での初期値を入れます  
 $build$関数を呼び出します
 
-## 計算量
-$$
-O(logN)
-$$
-
-## 実装例
+~~素直に書いた方が早い~~
 
 ##### main関数内で解いている問題
 > [https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B](https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B)

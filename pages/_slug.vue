@@ -54,8 +54,4 @@ h2 {
   margin-bottom: 10px;
 }
 
-.leftright-margin {
-  margin-left: 150px;
-  margin-right: 150px;
-}
 </style>

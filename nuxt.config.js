@@ -18,6 +18,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/library-description/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js', type: 'text/javascript' }
     ]
   },
 
@@ -58,8 +61,9 @@ export default {
         'remark-math',
         'remark-toc',
         'remark-footnotes',
-        [ 'remark-code-import-replace', {
-          replace: (node, meta, {u}) => {
+        ['remark-code-import-replace', {
+          // eslint-disable-next-line no-empty-pattern
+          replace: (node, meta, {}) => {
             return [
               /*
               u('html', {value: '<${meta.file.name}>'}),
@@ -76,7 +80,8 @@ export default {
     }
   },
   hooks: {
-    'component:dirs' : async (dirs) => {
+    // eslint-disable-next-line require-await
+    'component:dirs': async (dirs) => {
       dirs.push({
         path: '~/content',
         global: true
