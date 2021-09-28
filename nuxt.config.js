@@ -52,13 +52,13 @@ export default {
   // For deploy github pages
   router: {
     // base: '/library-description/',
-    extendRoutes (routes, resolve) {
-      routes.push({
-        name: 'custom',
-        path: '*',
-        component: resolve(__dirname, 'pages/errors/404.vue')
-      })
-    }
+    // extendRoutes (routes, resolve) {
+    //   routes.push({
+    //     name: 'custom',
+    //     path: '*',
+    //     component: resolve(__dirname, 'pages/errors/404.vue')
+    //   })
+    // }
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
