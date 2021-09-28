@@ -43,61 +43,63 @@
           バグを見つけたらTwitterなどで教えてくださるとありがたいです。
         </v-card>
 
-        <transition>
-          <div v-show="animationFlgs[0]">
-            <article>
-              <Lottie :options="hamster" />
-            </article>
-          </div>
-        </transition>
+        <v-card class="mt-5" elevation="0">
+          <transition>
+            <div v-show="animationFlgs[0]">
+              <article>
+                <Lottie :options="hamster" />
+              </article>
+            </div>
+          </transition>
 
-        <transition>
-          <div v-show="animationFlgs[1]">
-            <article>
-              <Lottie :options="gear" />
-            </article>
-          </div>
-        </transition>
+          <transition>
+            <div v-show="animationFlgs[1]">
+              <article>
+                <Lottie :options="gear" />
+              </article>
+            </div>
+          </transition>
 
-        <transition>
-          <div v-show="animationFlgs[2]">
-            <article>
-              <Lottie :options="hotspring" />
-            </article>
-          </div>
-        </transition>
+          <transition>
+            <div v-show="animationFlgs[2]">
+              <article>
+                <Lottie :options="hotspring" />
+              </article>
+            </div>
+          </transition>
 
-        <transition>
-          <div v-show="animationFlgs[3]">
-            <article>
-              <Lottie :options="paperPlane" />
-            </article>
-          </div>
-        </transition>
+          <transition>
+            <div v-show="animationFlgs[3]">
+              <article>
+                <Lottie :options="paperPlane" />
+              </article>
+            </div>
+          </transition>
 
-        <transition>
-          <div v-show="animationFlgs[4]">
-            <article>
-              <Lottie :options="rocket" />
-            </article>
-          </div>
-        </transition>
+          <transition>
+            <div v-show="animationFlgs[4]">
+              <article>
+                <Lottie :options="rocket" />
+              </article>
+            </div>
+          </transition>
 
-        <transition>
-          <div v-show="animationFlgs[5]">
-            <article>
-              <Lottie :options="run" />
-            </article>
-          </div>
-        </transition>
+          <transition>
+            <div v-show="animationFlgs[5]">
+              <article>
+                <Lottie :options="run" />
+              </article>
+            </div>
+          </transition>
 
-        <transition>
-          <div v-show="animationFlgs[6]">
-            <article>
-              <Lottie :options="shapes" />
-            </article>
-          </div>
-        </transition>
+          <transition>
+            <div v-show="animationFlgs[6]">
+              <article>
+                <Lottie :options="shapes" />
+              </article>
+            </div>
+          </transition>
+        </v-card>
       </div>
     </transition>
   </div>
