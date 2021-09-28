@@ -1,7 +1,7 @@
 ---
 title: BinarySearch
 description: データ構造 二分探索
-date: 2021/04/16
+date: 2021/09/29
 ---
 
 ## 説明
@@ -99,6 +99,18 @@ $$
 </details>
 
 <br>
+
+疑似コード
+```cpp
+valid = 絶対に有効になる値
+invalid = 絶対に無効になる値
+
+while (valid と invalid の差が 1 より大きい間) {
+   mid = (valid + invalid) / 2
+   if (is_valid(mid)) valid = mid
+   else invalid = mid
+}
+```
 
 ## 計算量
 $$
