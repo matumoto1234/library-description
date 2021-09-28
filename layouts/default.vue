@@ -8,7 +8,19 @@
       app
     >
       <!-- MENU BEGIN HERE -->
-      <v-subheader>Menu</v-subheader>
+      <v-list-item>
+        <v-list-item-title>Menu</v-list-item-title>
+
+        <v-btn
+          icon
+          @click="drawer = !drawer"
+        >
+          <v-icon>mdi-chevron-left</v-icon>
+        </v-btn>
+      </v-list-item>
+
+      <v-divider />
+
       <v-list expand>
         <v-list-group v-for="menu in menus" :key="menu.name" no-action>
           <template #activator>
@@ -87,6 +99,7 @@
 </template>
 
 <script>
+
 export default {
   data: () => ({
     drawer: false,

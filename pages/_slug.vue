@@ -5,9 +5,7 @@
       <p>作成日:{{ page.date }}</p>
       <h3>{{ page.description }}</h3>
     </div>
-    <div class="leftright-margin">
-      <nuxt-content :document="page" />
-    </div>
+    <nuxt-content :document="page" />
   </article>
 </template>
 
@@ -35,7 +33,7 @@ pre code {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 3em;
   position: relative;
   padding: 1.5rem;
   text-align: center;

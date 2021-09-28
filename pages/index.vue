@@ -36,17 +36,68 @@
         <v-divider />
 
         <v-card class="gothic-font">
-          matumotoが作ったライブラリです。
-          <br>
           コピペなどは自由です。
           <br>
           バグっていることもあるので信用しきらないでください。
           <br>
           バグを見つけたらTwitterなどで教えてくださるとありがたいです。
         </v-card>
-        <article>
-          <Lottie :options="lottieOptions" />
-        </article>
+
+        <transition>
+          <div v-show="animationFlgs[0]">
+            <article>
+              <Lottie :options="hamster" />
+            </article>
+          </div>
+        </transition>
+
+        <transition>
+          <div v-show="animationFlgs[1]">
+            <article>
+              <Lottie :options="gear" />
+            </article>
+          </div>
+        </transition>
+
+        <transition>
+          <div v-show="animationFlgs[2]">
+            <article>
+              <Lottie :options="hotspring" />
+            </article>
+          </div>
+        </transition>
+
+        <transition>
+          <div v-show="animationFlgs[3]">
+            <article>
+              <Lottie :options="paperPlane" />
+            </article>
+          </div>
+        </transition>
+
+        <transition>
+          <div v-show="animationFlgs[4]">
+            <article>
+              <Lottie :options="rocket" />
+            </article>
+          </div>
+        </transition>
+
+        <transition>
+          <div v-show="animationFlgs[5]">
+            <article>
+              <Lottie :options="run" />
+            </article>
+          </div>
+        </transition>
+
+        <transition>
+          <div v-show="animationFlgs[6]">
+            <article>
+              <Lottie :options="shapes" />
+            </article>
+          </div>
+        </transition>
       </div>
     </transition>
   </div>
@@ -61,8 +112,26 @@ export default {
   },
   asyncData () {
     return {
-      lottieOptions: {
+      hamster: {
+        animationData: require('~/assets/animation/hamster.json')
+      },
+      gear: {
         animationData: require('~/assets/animation/gear.json')
+      },
+      hotspring: {
+        animationData: require('~/assets/animation/hotspring.json')
+      },
+      paperPlane: {
+        animationData: require('~/assets/animation/paperPlane.json')
+      },
+      rocket: {
+        animationData: require('~/assets/animation/rocket.json')
+      },
+      run: {
+        animationData: require('~/assets/animation/run.json')
+      },
+      shapes: {
+        animationData: require('~/assets/animation/shapes.json')
       }
     }
   },
@@ -70,19 +139,19 @@ export default {
     return {
       isLoading: true,
       isLoadingLater: true,
-      animations: [
-        'gear.json',
-        'hamster.json',
-        'hotspring.json',
-        'paperPlane.json',
-        'rocket.json',
-        'run.json',
-        'shapes.json'
-      ]
+      animationFlgs: [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      showIdx: 0
     }
   },
   mounted () {
-    this.idx = this.getRandomInt(this.animations.length)
     setTimeout(function () {
       this.isLoading = false
       setTimeout(function () {
@@ -90,17 +159,17 @@ export default {
       }.bind(this), 500)
     }.bind(this), 750)
 
-    // setInterval(function () {
-    //   const animation = '~/assets/animation/' + this.getRandomAnimation()
-    //   this.lottieOptions.animationData = require(animation)
-    // }.bind(this), 5000)
+    setInterval(function () {
+      this.$set(this.animationFlgs, this.showIdx, false)
+      this.showIdx = this.getRandomInt(this.animationFlgs.length)
+      setTimeout(function () {
+        this.$set(this.animationFlgs, this.showIdx, true)
+      }.bind(this), 500)
+    }.bind(this), 10000)
   },
   methods: {
     getRandomInt (max) {
       return Math.floor(Math.random() * max)
-    },
-    getRandomAnimation () {
-      return this.animations[this.getRandomInt(this.animations.length)]
     }
   }
 }
@@ -109,7 +178,6 @@ export default {
 
 <style scoped>
 h1 {
-  font-size: 70px;
   position: relative;
   padding: 0.25em 1em;
   border-top: solid 2px black;
